@@ -1,0 +1,9 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/prod/$REPO_NAME:$BRANCH_NAME', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/prod/$REPO_NAME:$BRANCH_NAME']
+images: ['us-central1-docker.pkg.dev/$PROJECT_ID/prod/$REPO_NAME:$BRANCH_NAME']
+# Specify loggin info
+options:
+  logging: CLOUD_LOGGING_ONLY

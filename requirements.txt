@@ -1,0 +1,8 @@
+requests==2.28.2
+fastapi[all]
+uvicorn[standard]
+python-dotenv==1.0.0
+pytz==2023.3
+pandas
+numpy
+scikit-learn
